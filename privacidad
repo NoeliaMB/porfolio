@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad - Noelia Moreno</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* =========================
+       RESET & BASE
+    ========================= */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { font-family: 'Roboto', sans-serif;flex-direction: column; min-height: 100%; scroll-behavior: smooth; color: #f5f5f5; background: #0f0f0f;display: flex; }
+    a { color: inherit; text-decoration: none; }
+    p { margin-bottom: 12px; line-height: 1.7; color:#ccc; }
+    ul { margin: 0; padding: 0; list-style: none; }
+
+    /* =========================
+       HERO
+    ========================= */
+    .privacy-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg,#141414,#1a1a1a);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .privacy-hero h1 { font-family:'Great Vibes', cursive; font-size:4rem; margin-bottom:20px; }
+    .privacy-hero h2 { font-family:'Playfair Display', serif; font-size:2rem; margin-bottom:20px; text-shadow:0 0 8px rgba(255,255,255,0.3);}
+    .privacy-hero p { max-width:700px; margin:0 auto 30px auto; font-size:1.1rem;}
+    .privacy-btn {
+      display:inline-block; padding:14px 36px; border-radius:10px;
+      background: linear-gradient(135deg,#ff6ec4,#7873f5);
+      color:#fff; font-weight:500; transition: all 0.4s ease;
+    }
+    .privacy-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 6px 25px rgba(0,0,0,0.5); }
+
+    /* =========================
+       CONTENIDO ACORDEÓN
+    ========================= */
+ .privacy-content { flex: 1; padding:60px 20px; max-width:900px; margin:0 auto; }
+.accordion-item { margin-bottom:10px; border-radius:8px; overflow:hidden; background:#1a1a1a; box-shadow:0 2px 6px rgba(0,0,0,0.4); transition: box-shadow 0.4s ease; }
+.accordion-item:hover { box-shadow:0 4px 12px rgba(255,110,196,0.2), 0 4px 20px rgba(120,115,245,0.15); }
+.accordion-btn { width:100%; padding:15px 20px; text-align:left; font-size:1.1rem; font-weight:500; color:#f5f5f5; background:#222222; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition: background 0.3s, transform 0.2s; }
+.accordion-btn:hover { background:#333333; transform:scale(1.02); }
+.accordion-btn i { transition: transform 0.3s ease; background: linear-gradient(135deg,#ff6ec4,#7873f5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size:1.2rem; }
+.accordion-btn.active i { transform: rotate(180deg); }
+.accordion-content { max-height:0; overflow:hidden; transition: max-height 0.35s ease, padding 0.35s ease, background 0.35s ease; padding:0 20px; background: rgba(255,110,196,0); border-top:1px solid rgba(255,255,255,0.05); border-radius:0 0 8px 8px; }
+.accordion-content.open { padding:18px 22px; background: linear-gradient(145deg, rgba(255,110,196,0.05), rgba(120,115,245,0.05)); }
+.accordion-content p, .accordion-content ul { margin:15px 0; }
+.accordion-content ul li { position:relative; padding-left:25px; margin-bottom:8px; }
+.accordion-content ul li::before { content:'✓'; position:absolute; left:0; color:#ff6ec4; font-weight:bold; }
+    /* =========================
+       FOOTER
+    ========================= */
+.footer{position:relative;background:radial-gradient(circle at top left,#141414,#0a0a0a);color:#e6e6e6;padding:65px 35px 65px;font-size:.95rem;overflow:hidden;border-radius:22px;transition:all .6s ease;box-shadow:0 0 0 rgba(255,110,196,0);}
+.footer::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,110,196,.25),rgba(120,115,245,.15),transparent 70%);opacity:0;transform:scale(.9);filter:blur(80px);transition:all 1s ease;z-index:0;}
+.footer:hover::before{opacity:1;transform:scale(1);filter:blur(100px);}
+.footer:hover{box-shadow:0 0 45px rgba(255,110,196,.2),0 0 60px rgba(120,115,245,.15);transform:translateY(-3px) scale(1.015);}
+.footer h5,.footer p,.footer a,.footer .social-links,.footer .links,.footer .newsletter,.footer hr,.footer .copyright{position:relative;z-index:2;}
+.footer h5{color:#fff;margin-bottom:28px;font-weight:600;letter-spacing:.5px;}
+.footer p{color:#bfbfbf;line-height:1.75;margin-bottom:16px;}
+.footer a{color:#f5f5f5;position:relative;transition:color .3s ease,transform .3s ease;}
+.footer a:hover{color:#ffb8e0;transform:translateY(-2px);}
+.footer .row{display:flex;flex-wrap:wrap;gap:38px;justify-content:center;text-align:center;}
+.footer .row>div{flex:1 1 250px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:240px;}
+.footer .social-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px;justify-content:center;}
+.footer .social-links a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.08);backdrop-filter:blur(4px);box-shadow:inset 0 0 10px rgba(255,255,255,.05);transition:all .4s ease;font-size:1.2rem;position:relative;overflow:hidden;}
+.footer .social-links a::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,110,196,.4),rgba(120,115,245,.3),transparent 70%);opacity:0;transition:all .5s ease;filter:blur(25px);}
+.footer .social-links a:hover::after{opacity:1;}
+.footer .social-links a:hover{transform:scale(1.12);background:linear-gradient(135deg,#ff6ec4,#7873f5);box-shadow:0 0 30px rgba(255,110,196,.55),0 0 50px rgba(120,115,245,.45);}
+.footer .newsletter{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);backdrop-filter:blur(8px);border-radius:14px;padding:16px 18px;box-shadow:inset 0 0 15px rgba(255,255,255,.05);margin-top:30px;transition:all .5s ease;max-width:480px;width:100%;}
+.footer .newsletter:hover{box-shadow:0 0 35px rgba(255,110,196,.25),0 0 60px rgba(120,115,245,.25);}
+.footer .newsletter input{padding:14px 18px;border-radius:10px;border:none;background:transparent;color:#fff;flex:1;outline:none;}
+.footer .newsletter button{padding:14px 24px;border-radius:10px;border:none;background:linear-gradient(135deg,#ff6ec4,#7873f5);color:#fff;cursor:pointer;font-weight:600;letter-spacing:.5px;transition:all .35s ease;}
+.footer .newsletter button:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 0 25px rgba(255,110,196,.4),0 0 45px rgba(120,115,245,.3);}
+.footer hr{border-top:1px solid rgba(255,255,255,.1);margin:45px 0 25px;}
+.footer .copyright{text-align:center;color:#888;font-size:.87rem;letter-spacing:.5px;line-height:1.6;}
+@media(max-width:768px){.footer{padding:55px 25px 55px;border-radius:18px;}
+.footer .row{flex-direction:column;align-items:center;text-align:center;gap:45px;}
+.footer .newsletter{flex-direction:column;gap:12px;text-align:center;padding:14px;}
+.footer .newsletter input,.footer .newsletter button{width:100%;}
+.footer .social-links{justify-content:center;margin-top:25px;}
+.footer hr{margin:40px 0 20px;}}
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media(max-width:768px){ 
+      .privacy-hero h1{font-size:3rem;} 
+      .privacy-hero h2{font-size:1.5rem;} 
+      .newsletter{flex-direction:column;} 
+      .newsletter input,.newsletter button{width:100%;} }
+  </style>
+</head>
+<body class="dynamic-bg">
+
+  <!-- HERO PRIVACIDAD -->
+  <section class="privacy-hero">
+    <div class="container">
+      <h1>Política de Privacidad</h1>
+      <h2>Protección de tus datos personales</h2>
+      <p>En esta página encontrarás información sobre cómo recopilamos, usamos y protegemos tus datos.</p>
+      <a href="index.html" class="privacy-btn">Volver al Portfolio</a>
+    </div>
+  </section>
+
+  <!-- CONTENIDO ACORDEÓN -->
+  <section class="privacy-content">
+    <div class="container">
+
+      <!-- Acordeón -->
+      <div class="accordion-item">
+        <button class="accordion-btn">1. Responsable del tratamiento <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>La titularidad y responsabilidad de los datos recabados en este sitio web corresponde a <strong>Noelia Moreno Barrios</strong>, con correo de contacto <a href="mailto:noelia.mb286@gmail.com">noelia.mb286@gmail.com</a>.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">2. Información que recopilamos <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>Recopilamos información proporcionada voluntariamente a través de formularios de contacto o newsletter, incluyendo:</p>
+          <ul>
+            <li>Nombre y apellidos</li>
+            <li>Correo electrónico</li>
+            <li>Teléfono</li>
+            <li>Detalles de proyecto o consulta</li>
+            <li>Información de empresa (si aplica)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">3. Finalidad del tratamiento <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Responder consultas recibidas</li>
+            <li>Enviar novedades y boletines</li>
+            <li>Gestionar solicitudes de presupuesto o colaboración</li>
+            <li>Mejorar la experiencia de usuario y funcionamiento del sitio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">4. Legitimación <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Consentimiento explícito al enviar formularios o suscribirse</li>
+            <li>Cumplimiento de obligaciones contractuales o precontractuales</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">5. Conservación <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>Los datos se conservan mientras sean necesarios para la finalidad indicada y se eliminan de forma segura una vez cumplida.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">6. Destinatarios <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>No cedemos datos a terceros, salvo obligación legal. Proveedores externos actuarán como encargados del tratamiento con confidencialidad.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">7. Seguridad <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Contraseñas seguras</li>
+            <li>Certificados SSL</li>
+            <li>Acceso restringido al personal autorizado</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">8. Derechos del usuario <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <ul>
+            <li>Acceder, rectificar o suprimir datos</li>
+            <li>Solicitar limitación u oposición al tratamiento</li>
+            <li>Portabilidad de los datos</li>
+          </ul>
+          <p>Ejercicio de derechos: <a href="mailto:noelia.mb286@gmail.com">noelia.mb286@gmail.com</a>. También se puede reclamar ante la AEPD.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">9. Consentimiento <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>Al enviar formularios o suscribirse, aceptas esta política de privacidad.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">10. Cookies <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>Se usan cookies propias y de terceros para navegación, análisis y personalización. Puedes configurar o rechazarlas en tu navegador.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">11. Cambios <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>La política puede modificarse en cualquier momento, las actualizaciones se publicarán aquí.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">12. Contacto <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>Email: <a href="mailto:noelia.mb286@gmail.com">noelia.mb286@gmail.com</a></p>
+          <p>Propietaria: Noelia Moreno Barrios</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Noelia Moreno</h5>
+          <p>Diseñadora web y UX/UI. Transformo ideas en experiencias digitales claras, atractivas y memorables.</p>
+          <div class="social-links mt-3">
+            <a href="https://www.linkedin.com/in/noelia-moreno-barrios/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="https://instagram.com/noeliamb89" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://github.com/NoeliaMB" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+            <a href="mailto:noelia.mb286@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Enlaces</h5>
+          <ul>
+            <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="index.html#about">Sobre mí</a></li>
+            <li><a href="index.html#projects">Proyectos</a></li>
+            <li><a href="index.html#education">Educación</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Suscríbete</h5>
+          <p>Recibe novedades sobre mis proyectos y tips de diseño web:</p>
+          <form class="newsletter" action="#">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <div class="copyright text-center">
+        © 2025 <strong>Noelia Moreno Barrios</strong>. Todos los derechos reservados.  
+        Desarrollado con 💻 HTML · CSS · JavaScript
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Acordeón -->
+  <script>
+    const accordions = document.querySelectorAll('.accordion-btn');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+        // Cerrar todos
+        document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+        document.querySelectorAll('.accordion-btn i').forEach(i => i.style.transform = "rotate(0deg)");
+
+        if(!isOpen){
+          content.style.maxHeight = content.scrollHeight + "px";
+          icon.style.transform = "rotate(180deg)";
+        }
+      });
+    });
+
+    // Fondo dinámico
+    document.addEventListener('mousemove', e=>{
+      const x = e.clientX / window.innerWidth * 100;
+      const y = e.clientY / window.innerHeight * 100;
+      document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #111, #0f0f0f)`;
+    });
+  </script>
+
+</body>
+</html>
