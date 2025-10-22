@@ -7,8 +7,9 @@
 <!-- Fuentes y iconos-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-<!--Estilos personales pagina-->
+<!--Estilos personales pagina y Bootstrap-->
 <link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="dynamic-bg">
   <div class="watermark"></div>
@@ -94,28 +95,37 @@
           Con ella, el control de stock y la gestión de empleados se transforman en un proceso rápido y ordenado. 
           </p>
         
-        <div class="project-links">
-          <a href="https://github.com/NoeliaMB/demos/blob/main/demoLocal/demoLocal.php" target="_blank">🔗 GitHub</a>
-          <a href="https://noeliadev.lovestoblog.com/demos/demoLocal/DemoLocal.php" target="_blank">🌐 Demo</a>
-        </div>
+            <div class="project-links">
+              <a href="https://github.com/NoeliaMB/demos/blob/main/demoLocal/DemoLocal.php" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://noeliadev.lovestoblog.com/demos/demoLocal/DemoLocal.php" target="_blank" class="demo">
+                <i class="fas fa-globe"></i> Demo
+              </a>
+            </div>
       </div>
       
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Pettys</h3>
-          <span class="project-date">2024-2025</span>
-        </div>
-        
-        <p class="project-description">
-          Una plataforma pensada para los amantes de las mascotas. 
-          Desde el apoyo a protectoras hasta un sistema de <em>Pet Travel</em> con integración de Google Maps, 
-          Pettys busca mejorar el cuidado y bienestar animal. </p>
-        
-        <div class="project-links">
-          <a href="https://github.com/NoeliaMB/demos/blob/main/demoPettys/demoPettys.html" target="_blank">🔗 GitHub</a>
-          <a href="https://noeliadev.lovestoblog.com/demos/demoPettys/DemoPettys.html" target="_blank">🌐 Demo</a>
-        </div>
-      </div>
+     <div class="project-card">
+  <div class="project-header">
+    <h3>Pettys</h3>
+    <span class="project-date">2024-2025</span>
+  </div>
+  
+  <p class="project-description">
+    Una plataforma pensada para los amantes de las mascotas. 
+    Desde el apoyo a protectoras hasta un sistema de <em>Pet Travel</em> con integración de Google Maps, 
+    Pettys busca mejorar el cuidado y bienestar animal.
+  </p>
+  
+  <div class="project-links">
+    <a href="https://github.com/NoeliaMB/demos/blob/main/demoPettys/DemoPettys.html" target="_blank" class="github">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://noeliadev.lovestoblog.com/demos/demoPettys/DemoPettys.html" target="_blank" class="demo">
+      <i class="fas fa-globe"></i> Demo
+    </a>
+  </div>
+</div>
       
     </div>
   </div>
@@ -208,76 +218,143 @@
 
       <!-- Formulario Particular -->
       <form id="formParticular" class="contact-form active" action="send_mail.php" method="POST">
-        <label>Nombre completo*<input type="text" name="name" required></label>
-        <label>Email*<input type="email" name="email" required></label>
-        <label>Teléfono<input type="tel" name="phone"></label>
-        <label>Interés principal*  
-          <select name="interest" required>
-            <option value="">Selecciona</option>
-            <option value="portfolio">Portfolio Personal</option>
-            <option value="tiendaOnline">Tienda Online</option>
-            <option value="blog">Blog / Web Informativa</option>
-            <option value="otro">Otro</option>
-          </select>
-        </label>
-        <label>Tipo de proyecto*  
-          <select name="projectType" required>
-            <option value="">Selecciona</option>
-            <option value="diseñoWeb">Diseño Web / UX/UI</option>
-            <option value="consultoria">Consultoría</option>
-            <option value="proyectoPersonal">Proyecto Personal</option>
-            <option value="otro">Otro</option>
-          </select>
-        </label>
-        <label>Detalles proyecto*<textarea name="message" required></textarea></label>
-        <button type="submit">Enviar</button>
-        <button type="reset">Cancelar</button>
-      </form>
+  <label>Nombre completo*<input type="text" name="namep" required></label>
+  <label>Email*<input type="email" name="email" required></label>
+  <label>Teléfono<input type="tel" name="phone"></label>
+  <label>Interés principal*  
+    <select name="interest" required>
+      <option value="">Selecciona</option>
+      <option value="portfolio">Portfolio Personal</option>
+      <option value="tiendaOnline">Tienda Online</option>
+      <option value="blog">Blog / Web Informativa</option>
+      <option value="otro">Otro</option>
+    </select>
+  </label>
+  <label>Tipo de proyecto*  
+    <select name="projectType" required>
+      <option value="">Selecciona</option>
+      <option value="diseñoWeb">Diseño Web / UX/UI</option>
+      <option value="consultoria">Consultoría</option>
+      <option value="proyectoPersonal">Proyecto Personal</option>
+      <option value="otro">Otro</option>
+    </select>
+  </label>
+  <label>Detalles proyecto*<textarea name="message" required></textarea></label>
 
-      <!-- Formulario Empresa -->
-      <form id="formEmpresa" class="contact-form" action="send_mail.php" method="POST" style="display:none;">
-        <label>Nombre completo*<input type="text" name="name" required></label>
-        <label>Email*<input type="email" name="email" required></label>
-        <label>Teléfono<input type="tel" name="phone"></label>
-        <label>Nombre de la empresa*<input type="text" name="company" required></label>
-        <label>CIF / NIF<input type="text" name="cif"></label>
-        <label>Presupuesto aproximado  
-          <select name="budget">
-            <option value="">Selecciona</option>
-            <option value="menos2000">Menos de 2.000€</option>
-            <option value="2000-5000">2.000€ - 5.000€</option>
-            <option value="mas5000">Más de 5.000€</option>
-          </select>
-        </label>
-        <label>Tipo de proyecto*  
-          <select name="projectType" required>
-            <option value="">Selecciona</option>
-            <option value="diseñoWeb">Diseño Web / UX/UI</option>
-            <option value="consultoria">Consultoría</option>
-            <option value="proyectoPersonal">Proyecto Personal</option>
-            <option value="otro">Otro</option>
-          </select>
-        </label>
-        <label>Detalles proyecto*<textarea name="message" required></textarea></label>
-        <button type="submit">Enviar</button>
-        <button type="reset">Cancelar</button>
-      </form>
+  <!-- Checkbox de consentimiento GDPR -->
+  <label class="privacy-label">
+    <input type="checkbox" name="consent" required>
+    Acepto que mis datos sean tratados según la 
+    <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
+</label>
 
-<!--Redes Sociales-->
-   <div class="social-links">
-  <a href="https://linkedin.com/in/noelia-moreno-barrios" target="_blank" class="social-item linkedin">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-  <a href="https://instagram.com/tuusuario" target="_blank" class="social-item instagram">
-    <i class="fab fa-instagram"></i> Instagram
-  </a>
-  <a href="https://github.com/NoeliaMB" target="_blank" class="social-item github">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-</div>
+  <button type="submit">Enviar</button>
+  <button type="reset">Cancelar</button>
+</form>
+
+    <!-- Formulario Empresa -->
+<form id="formEmpresa" class="contact-form" action="send_mail.php" method="POST" style="display:none;">
+  <label>Nombre completo*<input type="text" name="name" required></label>
+  <label>Email*<input type="email" name="email" required></label>
+  <label>Teléfono<input type="tel" name="phone"></label>
+  <label>Nombre de la empresa*<input type="text" name="company" required></label>
+  <label>CIF / NIF<input type="text" name="cif"></label>
+  <label>Presupuesto aproximado  
+    <select name="budget">
+      <option value="">Selecciona</option>
+      <option value="menos2000">Menos de 2.000€</option>
+      <option value="2000-5000">2.000€ - 5.000€</option>
+      <option value="mas5000">Más de 5.000€</option>
+    </select>
+  </label>
+  <label>Tipo de proyecto*  
+    <select name="projectType" required>
+      <option value="">Selecciona</option>
+      <option value="diseñoWeb">Diseño Web / UX/UI</option>
+      <option value="consultoria">Consultoría</option>
+      <option value="proyectoPersonal">Proyecto Personal</option>
+      <option value="otro">Otro</option>
+    </select>
+  </label>
+  <label>Detalles proyecto*<textarea name="message" required></textarea></label>
+
+  <!-- Checkbox de consentimiento GDPR -->
+ <label class="privacy-label">
+    <input type="checkbox" name="consent" required>
+    Acepto que mis datos sean tratados según la 
+    <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
+</label>
+
+  <button type="submit">Enviar</button>
+  <button type="reset">Cancelar</button>
+</form>
   </div>
 </section>
 
+ <!--Footer-->
+<footer class="footer bg-dark text-light pt-5">
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Sobre ti / Información -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Noelia Moreno</h5>
+        <p>
+          Diseñadora web y UX/UI. Transformo ideas en experiencias digitales claras, atractivas y memorables.
+        </p>
+        <div class="social-links mt-3">
+          <a href="https://www.linkedin.com/in/noelia-moreno-barrios/" target="_blank" class="me-3 text-light">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a href="https://instagram.com/noeliamb89" target="_blank" class="me-3 text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://github.com/NoeliaMB" target="_blank" class="me-3 text-light">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a href="mailto:noelia.mb286@gmail.com" class="text-light">
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Enlaces</h5>
+        <ul class="list-unstyled">
+          <li><a href="#hero" class="text-light text-decoration-none">Inicio</a></li>
+          <li><a href="#about" class="text-light text-decoration-none">Sobre mí</a></li>
+          <li><a href="#projects" class="text-light text-decoration-none">Proyectos</a></li>
+          <li><a href="#education" class="text-light text-decoration-none">Educación</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Suscripción a newsletter -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Suscríbete</h5>
+        <p>Recibe novedades sobre mis proyectos y tips de diseño web:</p>
+        <form action="#" class="d-flex flex-column flex-sm-row gap-2">
+          <input type="email" class="form-control flex-grow-1" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        </form>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Derechos de autor -->
+    <div class="text-center small">
+      © 2025 <strong>Noelia Moreno Barrios</strong>. Todos los derechos reservados.  
+      Desarrollado con 💻 HTML · CSS · JavaScript
+    </div>
+
+  </div>
+</footer>
+
+<!--Scripts-->
 <script>
   //Movimiento de pestaña formularios 
   const tabs = document.querySelectorAll(".tab-btn");
@@ -307,7 +384,7 @@ sections.forEach(section => {
   section.addEventListener('mouseenter', () => {
     const bg = section.getAttribute('data-bg');
     document.body.style.background = `radial-gradient(circle at 50% 50%, ${bg}, #0f0f0f)`;
-    section.querySelectorAll('.feature-card, .project-card, .edu-item, #contact-form, .social-links').forEach(el=>{
+    section.querySelectorAll('.feature-card, .project-card, .edu-item, .contact-form, .social-links').forEach(el=>{
       el.style.opacity='1';
       el.style.transform='translateY(0)';
     });
@@ -319,7 +396,7 @@ const menuToggle = document.getElementById('menu-toggle');
 const sidebar = document.getElementById('sidebar');
 menuToggle.addEventListener('click', ()=>{
   menuToggle.classList.toggle('active');
-  sidebar.style.right = sidebar.style.right === '0px' ? '-250px' : '0px';
+  sidebar.classList.toggle('open');
 });
 
 // Scroll suave desde sidebar
@@ -345,7 +422,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
-document.querySelectorAll('.feature-card, .project-card, .edu-item, .social-item, .contact-form').forEach(el => {
+document.querySelectorAll('.feature-card, .project-card, .edu-item, .social-links, .contact-form').forEach(el => {
   observer.observe(el);
 });
 
