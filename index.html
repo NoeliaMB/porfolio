@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noelia Moreno - Portfolio UX/UI</title>
-<!-- Fuentes y iconos-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-<!--Estilos personales pagina y Bootstrap-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Noelia Moreno — Diseñadora Web & UX/UI. Portfolio con proyectos, formación y contacto.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Palabras clave -->
+  <meta name="keywords" content="Noelia Moreno, Diseñadora Web, UX, UI, Portfolio, Diseño Web, Proyectos Web, Experiencia de Usuario">
+  <!-- Canonical-->
+<link rel="canonical" href="https://noeliadev.lovestoblog.com/">
+
+  <!-- Autor -->
+<meta name="author" content="Noelia Moreno">
+
+  <title>Noelia Moreno - Portfolio UX/UI</title>
+
+  <!-- Preconnect para fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" integrity="REPLACE_WITH_SRI_HASH" crossorigin="anonymous">
+
+  <!-- Hoja de Estilos de Diseño Propio-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon / apple-touch -->
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+
+  <!-- Open Graph mínimo -->
+  <meta property="og:title" content="Noelia Moreno — Portfolio UX/UI">
+  <meta property="og:description" content="Diseñadora Web y UX/UI — proyectos, formación y contacto.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://noeliadev.lovestoblog.com/">
+  <meta property="og:image" content="https://noeliadev.lovestoblog.com/img/logo.png">
+  
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Noelia Moreno — Portfolio UX/UI: proyectos, formación y contacto.">
+
+  <!-- Tema del navegador -->
+  <meta name="theme-color" content="#111111">
+
 </head>
 <body class="dynamic-bg">
   <div class="watermark"></div>
 <!-- MENU HAMBURGUESA -->
-<div class="menu-toggle" id="menu-toggle">
+<div class="menu-toggle" id="menu-toggle" role="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar" tabindex="0">
   <div></div>
   <div></div>
   <div></div>
+  <span class="sr-only">Abrir menú</span>
 </div>
-<nav class="sidebar" id="sidebar">
+
+<nav class="sidebar" id="sidebar" role="navigation" aria-hidden="true">
   <a href="#hero">Inicio</a>
   <a href="#about">Sobre mí</a>
   <a href="#projects">Proyectos</a>
@@ -29,11 +73,13 @@
 
 <!-- HERO -->
 <section class="hero" id="hero" data-bg="#111111">
-  <div class="container">
-    <h1>Noelia Moreno</h1>
-    <h2>Diseñadora Web & UX/UI</h2>
-    <p>Transformo ideas en experiencias digitales inolvidables.</p>
-    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Descubre más</button>
+  <div class="container hero-content">
+    <header>
+      <h1>Noelia Moreno</h1>
+      <h2>Diseñadora Web & UX/UI</h2>
+      <p>Transformo ideas en experiencias digitales inolvidables.</p>
+    </header>
+    <button type="button" class="btn-hero" id="btn-scroll-about">Descubre más</button>
   </div>
 </section>
 
@@ -96,10 +142,10 @@
           </p>
         
             <div class="project-links">
-              <a href="https://github.com/NoeliaMB/demos/blob/main/demoLocal/DemoLocal.php" target="_blank" class="github">
+              <a href="https://github.com/NoeliaMB/demos/blob/main/demoLocal/DemoLocal.php" target="_blank" class="github" rel="noopener noreferrer">
                 <i class="fab fa-github"></i> GitHub
               </a>
-              <a href="https://noeliadev.lovestoblog.com/demos/demoLocal/DemoLocal.php" target="_blank" class="demo">
+              <a href="https://noeliadev.lovestoblog.com/demos/demoLocal/DemoLocal.php" target="_blank" class="demo" rel="noopener noreferrer">
                 <i class="fas fa-globe"></i> Demo
               </a>
             </div>
@@ -118,10 +164,10 @@
   </p>
   
   <div class="project-links">
-    <a href="https://github.com/NoeliaMB/demos/blob/main/demoPettys/DemoPettys.html" target="_blank" class="github">
+    <a href="https://github.com/NoeliaMB/demos/blob/main/demoPettys/DemoPettys.html" target="_blank" class="github" rel="noopener noreferrer">
       <i class="fab fa-github"></i> GitHub
     </a>
-    <a href="https://noeliadev.lovestoblog.com/demos/demoPettys/DemoPettys.html" target="_blank" class="demo">
+    <a href="https://noeliadev.lovestoblog.com/demos/demoPettys/DemoPettys.html" target="_blank" class="demo" rel="noopener noreferrer">
       <i class="fas fa-globe"></i> Demo
     </a>
   </div>
@@ -292,7 +338,7 @@
 </section>
 
  <!--Footer-->
-<footer class="footer bg-dark text-light pt-5">
+<footer class="footer bg-dark text-light pt-5" role="contentinfo">
   <div class="container">
 
     <div class="row">
@@ -304,16 +350,16 @@
           Diseñadora web y UX/UI. Transformo ideas en experiencias digitales claras, atractivas y memorables.
         </p>
         <div class="social-links mt-3">
-          <a href="https://www.linkedin.com/in/noelia-moreno-barrios/" target="_blank" class="me-3 text-light">
+          <a href="https://www.linkedin.com/in/noelia-moreno-barrios/" target="_blank" rel="noopener noreferrer" class="me-3 text-light" aria-label="LinkedIn de Noelia Moreno" title="LinkedIn">
             <i class="fab fa-linkedin fa-lg"></i>
           </a>
-          <a href="https://instagram.com/noeliamb89" target="_blank" class="me-3 text-light">
+          <a href="https://instagram.com/noeliamb89" target="_blank" rel="noopener noreferrer" class="me-3 text-light" aria-label="Instagram de Noelia Moreno" >
             <i class="fab fa-instagram fa-lg"></i>
           </a>
-          <a href="https://github.com/NoeliaMB" target="_blank" class="me-3 text-light">
+          <a href="https://github.com/NoeliaMB" target="_blank" rel="noopener noreferrer" class="me-3 text-light" aria-label="GitHub de Noelia Moreno">
             <i class="fab fa-github fa-lg"></i>
           </a>
-          <a href="mailto:noelia.mb286@gmail.com" class="text-light">
+          <a href="mailto:noelia.mb286@gmail.com" class="text-light" aria-label="Enviar correo a Noelia Moreno">
             <i class="fas fa-envelope fa-lg"></i>
           </a>
         </div>
@@ -322,28 +368,30 @@
       <!-- Enlaces rápidos -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">Enlaces</h5>
-        <ul class="list-unstyled">
-          <li><a href="#hero" class="text-light text-decoration-none">Inicio</a></li>
-          <li><a href="#about" class="text-light text-decoration-none">Sobre mí</a></li>
-          <li><a href="#projects" class="text-light text-decoration-none">Proyectos</a></li>
-          <li><a href="#education" class="text-light text-decoration-none">Educación</a></li>
-          <li><a href="#contact" class="text-light text-decoration-none">Contacto</a></li>
-        </ul>
+        <nav aria-label="Enlaces rápidos">
+          <ul class="list-unstyled">
+            <li><a href="#hero" class="text-light text-decoration-none">Inicio</a></li>
+            <li><a href="#about" class="text-light text-decoration-none">Sobre mí</a></li>
+            <li><a href="#projects" class="text-light text-decoration-none">Proyectos</a></li>
+            <li><a href="#education" class="text-light text-decoration-none">Educación</a></li>
+            <li><a href="#contact" class="text-light text-decoration-none">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
 
       <!-- Suscripción a newsletter -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">Suscríbete</h5>
         <p>Recibe novedades sobre mis proyectos y tips de diseño web:</p>
-        <form action="#" class="d-flex flex-column flex-sm-row gap-2">
-          <input type="email" class="form-control flex-grow-1" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        <form action="#" class="d-flex flex-column flex-sm-row gap-2" aria-label="Formulario de suscripción">
+          <input type="email" class="form-control flex-grow-1" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+          <button type="submit" class="btn btn-primary" aria-label="Suscribirse al newsletter">Suscribirse</button>
         </form>
       </div>
 
     </div>
 
-    <hr class="border-secondary">
+    <hr class="border-secondary my-4">
 
     <!-- Derechos de autor -->
     <div class="text-center small">
@@ -353,91 +401,247 @@
 
   </div>
 </footer>
-
 <!--Scripts-->
 <script>
-  //Movimiento de pestaña formularios 
-  const tabs = document.querySelectorAll(".tab-btn");
-const forms = document.querySelectorAll(".contact-form");
+document.addEventListener('DOMContentLoaded', () => {
+ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
-
-    forms.forEach(form => {
-      form.style.display = (form.id === tab.dataset.target) ? "block" : "none";
-    });
-  });
-});
-
-// Background dinámico siguiendo el cursor
-document.addEventListener('mousemove', e => {
-  const x = e.clientX / window.innerWidth * 100;
-  const y = e.clientY / window.innerHeight * 100;
-  document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #111, #0f0f0f)`;
-});
-
-// Cambio de fondo por sección
-const sections = document.querySelectorAll('section');
-sections.forEach(section => {
-  section.addEventListener('mouseenter', () => {
-    const bg = section.getAttribute('data-bg');
-    document.body.style.background = `radial-gradient(circle at 50% 50%, ${bg}, #0f0f0f)`;
-    section.querySelectorAll('.feature-card, .project-card, .edu-item, .contact-form, .social-links').forEach(el=>{
-      el.style.opacity='1';
-      el.style.transform='translateY(0)';
-    });
-  });
-});
-
-// MENU HAMBURGUESA
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar = document.getElementById('sidebar');
-menuToggle.addEventListener('click', ()=>{
-  menuToggle.classList.toggle('active');
-  sidebar.classList.toggle('open');
-});
-
-// Scroll suave desde sidebar
-sidebar.querySelectorAll('a').forEach(link=>{
-  link.addEventListener('click', e=>{
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({behavior:'smooth'});
-    // cerrar menu después de click
-    menuToggle.classList.remove('active');
-    sidebar.style.right='-250px';
-  });
-});
-
-//Intersecciones y movimientos
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
+  /* ---------------------------
+   Scroll suave botón HERO
+--------------------------- */
+const btnScrollAbout = document.getElementById('btn-scroll-about');
+if (btnScrollAbout) {
+  btnScrollAbout.addEventListener('click', () => {
+    const target = document.getElementById('about');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
-}, { threshold: 0.2 });
-
-// Observamos todos los elementos que quieras animar
-document.querySelectorAll('.hero h1, .hero h2, .feature-card, .project-card, .edu-item, .social-links, .contact-form').forEach(el => {
-  observer.observe(el);
-});
-
-//Marca de agua fondo pantalla
-window.addEventListener('load', () => {
-  document.body.classList.add('scroll');
-});
-
-// JS para ajustar altura
-function setFullHeight() {
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
 }
-setFullHeight();
-window.addEventListener('resize', setFullHeight);
+
+  /* ---------------------------
+     Helpers
+  --------------------------- */
+  function throttle(fn, wait = 100) {
+    let last = 0;
+    return (...args) => {
+      const now = Date.now();
+      if (now - last >= wait) {
+        last = now;
+        fn(...args);
+      }
+    };
+  }
+
+ 
+
+  /* ---------------------------
+     Tabs (formularios)
+  --------------------------- */
+  const tabs = document.querySelectorAll('.tab-btn');
+  const forms = document.querySelectorAll('.contact-form');
+
+  // Inicializa Formulario según clase .active 
+  forms.forEach(f => {
+    f.style.display = f.classList.contains('active') ? 'block' : 'none';
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      forms.forEach(form => {
+        if (form.id === tab.dataset.target) {
+          form.classList.add('active');
+          form.style.display = 'block';
+        } else {
+          form.classList.remove('active');
+          form.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  /* ---------------------------
+     Background dinámico
+  --------------------------- */
+  const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+  if (hasFinePointer && window.innerWidth >= 768) {
+    const onMove = throttle(e => {
+      const x = e.clientX / window.innerWidth * 100;
+      const y = e.clientY / window.innerHeight * 100;
+      document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #111, #0f0f0f)`;
+    }, 80);
+    document.addEventListener('mousemove', onMove);
+  }
+
+  /* ---------------------------
+     Cambio de fondo por sección
+  --------------------------- */
+  document.querySelectorAll('section[data-bg]').forEach(section => {
+    section.addEventListener('mouseenter', () => {
+      const bg = section.getAttribute('data-bg') || '#0f0f0f';
+      document.body.style.background = `radial-gradient(circle at 50% 50%, ${bg}, #0f0f0f)`;
+      section.classList.add('section-hover');
+    });
+    section.addEventListener('mouseleave', () => {
+      section.classList.remove('section-hover');
+    });
+  });
+
+
+    /* ---------------------------
+   Scroll suave en footer
+--------------------------- */
+document.querySelectorAll('.footer a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+/* ---------------------------
+   Animación de entrada del footer
+--------------------------- */
+
+const footer = document.querySelector('.footer');
+
+if (footer && !prefersReducedMotion && 'IntersectionObserver' in window) {
+  const footerObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        footer.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  footerObserver.observe(footer);
+} else {
+  footer.classList.add('is-visible'); // fallback para movilidad o IE
+}
+
+  /* ---------------------------
+     Menu hamburguesa / sidebar
+  --------------------------- */
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const srText = menuToggle.querySelector('.sr-only');
+
+if (menuToggle && sidebar) {
+  sidebar.setAttribute('aria-hidden', 'true');
+  menuToggle.setAttribute('aria-expanded', 'false');
+
+  const toggleMenu = () => {
+    const isOpen = sidebar.classList.toggle('open');
+    menuToggle.classList.toggle('active', isOpen);
+    sidebar.setAttribute('aria-hidden', (!isOpen).toString());
+    menuToggle.setAttribute('aria-expanded', isOpen.toString());
+    srText.textContent = isOpen ? 'Cerrar menú' : 'Abrir menú';
+  };
+
+    menuToggle.addEventListener('click', toggleMenu);
+    
+  // Abrir/cerrar con teclado (Enter o Space)
+  menuToggle.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      menuToggle.click();
+    }
+  });
+
+  // Cerrar menú al hacer click en un enlace
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      // Scroll suave para anclas internas
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Cerrar menú
+      sidebar.classList.remove('open');
+      menuToggle.classList.remove('active');
+      sidebar.setAttribute('aria-hidden', 'true');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+
+  //Cerrar menu hamburguesa al hacer scroll
+  window.addEventListener('scroll', () => {
+  if (sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+    menuToggle.classList.remove('active');
+    sidebar.setAttribute('aria-hidden', 'true');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menú');
+  }
+});
+
+  // Cerrar menú si se hace clic fuera
+  document.addEventListener('click', e => {
+    if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('open')) {
+      sidebar.classList.remove('open');
+      menuToggle.classList.remove('active');
+      sidebar.setAttribute('aria-hidden', 'true');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+    }
+  });
+}
+  /* ---------------------------
+     IntersectionObserver unificado
+  --------------------------- */
+  const animTargets = document.querySelectorAll('.hero h1, .hero h2, .feature-card, .project-card, .edu-item, .social-links, .contact-form, p, h2, h3');
+
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+   animTargets.forEach(el => observer.observe(el));
+  } else {
+    // Fallback general para navegadores que no soportan IO o con movimiento reducido
+    animTargets.forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* ---------------------------
+     Marca de agua: activar clase scroll al load
+  --------------------------- */
+ document.body.classList.add('scroll');
+
+  // Forzar visibilidad inmediata en móvil (si se detecta ancho pequeño)
+  // Aunque el bloque 'else' superior ya ayuda, esto refuerza el fix para móviles
+  if (window.innerWidth < 768) {
+    animTargets.forEach(el => el.classList.add('is-visible'));
+  }
+  
+  // Responsive movil: Ajuste de la altura visible (vh)
+  const setVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+
+  setVh();
+  window.addEventListener('resize', setVh);
+
+});
+
 
 </script>
 </body>
+</html>
+
+
 </html>
