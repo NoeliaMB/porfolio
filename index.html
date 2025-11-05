@@ -1,211 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="Noelia Moreno — Diseñadora Web & UX/UI. Portfolio con proyectos, formación y contacto.">
-  <meta name="robots" content="index, follow">
-
-  <!-- Palabras clave -->
-  <meta name="keywords" content="Noelia Moreno, Diseñadora Web, UX, UI, Portfolio, Diseño Web, Proyectos Web, Experiencia de Usuario">
-  <!-- Canonical-->
-<link rel="canonical" href="https://noeliadev.lovestoblog.com/">
-
-  <!-- Autor -->
-<meta name="author" content="Noelia Moreno">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="description" content="Noelia Moreno — Diseñadora Web & UX/UI. Portfolio con proyectos, formación y contacto." />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="keywords" content="Noelia Moreno, Diseñadora Web, UX, UI, Portfolio, Diseño Web, Proyectos Web, Experiencia de Usuario" />
+  <link rel="canonical" href="https://noeliadev.lovestoblog.com/" />
+  <meta name="author" content="Noelia Moreno" />
   <title>Noelia Moreno - Portfolio UX/UI</title>
 
-  <!-- Preconnect para fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fuentes & Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" crossorigin="anonymous" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" crossorigin="anonymous">
+  <!-- Bootstrap (opcional para utilidades) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Tu CSS (reemplazar con el archivo que te doy) -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" integrity="REPLACE_WITH_SRI_HASH" crossorigin="anonymous">
-
-  <!-- Hoja de Estilos de Diseño Propio-->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon / apple-touch -->
-  <link rel="icon" href="img/logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
-
-  <!-- Open Graph mínimo -->
-  <meta property="og:title" content="Noelia Moreno — Portfolio UX/UI">
-  <meta property="og:description" content="Diseñadora Web y UX/UI — proyectos, formación y contacto.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://noeliadev.lovestoblog.com/">
-  <meta property="og:image" content="https://noeliadev.lovestoblog.com/img/logo.png">
-  
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Noelia Moreno — Portfolio UX/UI: proyectos, formación y contacto.">
-
-  <!-- Tema del navegador -->
-  <meta name="theme-color" content="#111111">
-
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
 </head>
 <body class="dynamic-bg">
-  <div class="watermark"></div>
-<!-- MENU HAMBURGUESA -->
-<div class="menu-toggle" id="menu-toggle" role="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar" tabindex="0">
-  <div></div>
-  <div></div>
-  <div></div>
-  <span class="sr-only">Abrir menú</span>
-</div>
+  <div class="scroll-progress"></div>
+  <!-- Skip link para accesibilidad -->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-<nav class="sidebar" id="sidebar" role="navigation" aria-hidden="true">
-  <a href="#hero">Inicio</a>
-  <a href="#about">Sobre mí</a>
-  <a href="#projects">Proyectos</a>
-  <a href="#education">Educación</a>
-  <a href="#contact">Contacto</a>
-</nav>
+  <!-- Marca de agua (oculta en móviles) -->
+  <div class="watermark" aria-hidden="true"></div>
 
-<!-- HERO -->
-<section class="hero" id="hero" data-bg="#111111">
-  <div class="container hero-content">
-    <header>
-      <h1>Noelia Moreno</h1>
-      <h2>Diseñadora Web & UX/UI</h2>
-      <p>Transformo ideas en experiencias digitales inolvidables.</p>
-    </header>
-    <button type="button" class="btn-hero" id="btn-scroll-about">Descubre más</button>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about" data-bg="#1a1a1a">
-  <div class="container">
-    <h2>Sobre mí</h2>
-    <p>¡Hola! Soy <strong>Noelia Moreno</strong>, diseñadora web y UX/UI. Me apasiona crear experiencias digitales claras, atractivas y memorables. Combino creatividad, diseño visual y funcionalidad para generar proyectos que conecten con las personas.</p>
+  <!-- MENU HAMBURGUESA -->
+  <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
     
-    <div class="about-features">
-      <div class="feature-card">
-        <h3>💡 Creatividad & Innovación</h3>
-        <p>Exploro ideas y diseño soluciones únicas que mejoran la experiencia del usuario.</p>
-      </div>
-      
-      <div class="feature-card">
-        <h3>🛠️ Resolutiva & Organizada</h3>
-        <p>Planifico proyectos, organizo tareas y encuentro soluciones eficientes ante cualquier reto.</p>
-      </div>
-      
-      <div class="feature-card">
-        <h3>🎨 UX/UI & Diseño Visual</h3>
-        <p>Combino estética y funcionalidad para interfaces intuitivas y atractivas.</p>
-      </div>
-      
-      <div class="feature-card">
-        <h3>✨ Curiosidad & Aprendizaje</h3>
-        <p>Siempre en busca de aprender nuevas herramientas y tendencias en diseño digital.</p>
-      </div>
-      
-      <div class="feature-card">
-        <h3>🤝 Trabajo en Equipo</h3>
-        <p>Disfruto colaborando con otros profesionales, potenciando ideas y alcanzando mejores resultados.</p>
-      </div>
-      
-      <div class="feature-card">
-        <h3>🚀 Orientación a Resultados</h3>
-        <p>Me enfoco en cumplir objetivos de negocio y usuario, generando impacto real en cada proyecto.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </button>
 
-<!-- PROYECTOS -->
-<section id="projects" data-bg="#222222">
-  <div class="container">
-    <h2>Proyectos Destacados</h2>
-    
-    <div class="projects">
-      
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Gestión Local</h3>
-          <span class="project-date">2023-2024</span>
+  <nav id="sidebar" class="sidebar" role="navigation" aria-hidden="true" aria-label="Navegación principal">
+    <a href="#hero">Inicio</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#education">Educación</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero reveal" id="hero" data-bg="#111111">
+      <div class="container hero-content">
+        <header role="banner">
+          <h1 class="name reveal-item">Noelia Moreno</h1>
+          <h2 class="reveal-item">Diseñadora Web & UX/UI</h2>
+          <p class="reveal-item">Transformo ideas en experiencias digitales inolvidables.</p>
+        </header>
+        <button type="button" class="btn-hero" aria-label="Ir a sección Sobre mí" id="btn-scroll-about">Descubre más</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal" role="region" aria-labelledby="about-title" data-bg="#1a1a1a">
+      <div class="container">
+        <h2 id="about-title" class="reveal-item">Sobre mí</h2>
+        <p class="reveal-item">¡Hola! Soy <strong>Noelia Moreno</strong>, diseñadora web y UX/UI. Me apasiona crear experiencias digitales claras, atractivas y memorables. Combino creatividad, diseño visual y funcionalidad para generar proyectos que conecten con las personas.</p>
+
+        <div class="about-features">
+          <div class="feature-card reveal-item">
+            <h3>💡 Creatividad & Innovación</h3>
+            <p>Exploro ideas y diseño soluciones únicas que mejoran la experiencia del usuario.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3>🛠️ Resolutiva & Organizada</h3>
+            <p>Planifico proyectos, organizo tareas y encuentro soluciones eficientes ante cualquier reto.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3>🎨 UX/UI & Diseño Visual</h3>
+            <p>Combino estética y funcionalidad para interfaces intuitivas y atractivas.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3>✨ Curiosidad & Aprendizaje</h3>
+            <p>Siempre en busca de aprender nuevas herramientas y tendencias en diseño digital.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3>🤝 Trabajo en Equipo</h3>
+            <p>Disfruto colaborando con otros profesionales, potenciando ideas y alcanzando mejores resultados.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3>🚀 Orientación a Resultados</h3>
+            <p>Me enfoco en cumplir objetivos de negocio y usuario, generando impacto real en cada proyecto.</p>
+          </div>
         </div>
-        
-        <p class="project-description">
-          Una aplicación web diseñada para pequeñas empresas. 
-          Con ella, el control de stock y la gestión de empleados se transforman en un proceso rápido y ordenado. 
-          </p>
-        
-            <div class="project-links">
-              <a href="https://github.com/NoeliaMB/demos/blob/main/demoLocal/DemoLocal.php" target="_blank" class="github" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="https://noeliadev.lovestoblog.com/demos/demoLocal/DemoLocal.php" target="_blank" class="demo" rel="noopener noreferrer">
-                <i class="fas fa-globe"></i> Demo
-              </a>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="projects" class="reveal" data-bg="#222222">
+      <div class="container">
+        <h2 class="reveal-item">Proyectos Destacados</h2>
+
+        <div class="projects">
+          <article class="project-card reveal-item" aria-labelledby="p1">
+            <div class="project-header">
+              <h3 id="p1">Gestión Local</h3>
+              <span class="project-date">2023-2024</span>
             </div>
-      </div>
-      
-     <div class="project-card">
-  <div class="project-header">
-    <h3>Pettys</h3>
-    <span class="project-date">2024-2025</span>
-  </div>
-  
-  <p class="project-description">
-    Una plataforma pensada para los amantes de las mascotas. 
-    Desde el apoyo a protectoras hasta un sistema de <em>Pet Travel</em> con integración de Google Maps, 
-    Pettys busca mejorar el cuidado y bienestar animal.
-  </p>
-  
-  <div class="project-links">
-    <a href="https://github.com/NoeliaMB/demos/blob/main/demoPettys/DemoPettys.html" target="_blank" class="github" rel="noopener noreferrer">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://noeliadev.lovestoblog.com/demos/demoPettys/DemoPettys.html" target="_blank" class="demo" rel="noopener noreferrer">
-      <i class="fas fa-globe"></i> Demo
-    </a>
-  </div>
-</div>
-      
-    </div>
-  </div>
-</section>
+            <p class="project-description">Una aplicación web diseñada para pequeñas empresas. Con ella, el control de stock y la gestión de empleados se transforman en un proceso rápido y ordenado.</p>
+            <div class="project-links">
+              <a href="https://github.com/NoeliaMB/demos/blob/main/demoLocal/DemoLocal.php" target="_blank" rel="noopener noreferrer" class="github"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://noeliadev.lovestoblog.com/demos/demoLocal/DemoLocal.php" target="_blank" rel="noopener noreferrer" class="demo"><i class="fas fa-globe"></i> Demo</a>
+            </div>
+          </article>
 
-<!-- EDUCACIÓN -->
-<section id="education" data-bg="#1b1b1b">
-  <div class="container">
-    <h2>Formación y Estudios</h2>
-    
-    <div class="education-timeline">
-      
-      <!-- Certificado oficial -->
-      <div class="edu-item">
-        <div class="edu-icon">🎓</div>
-        <div class="edu-content">
-          <h3>Certificado Diseñador Web</h3>
-          <span>Comunidad de Madrid – 2025</span>
-          <p>Formación profesional en diseño web, experiencia de usuario y accesibilidad.</p>
+          <article class="project-card reveal-item" aria-labelledby="p2">
+            <div class="project-header">
+              <h3 id="p2">Pettys</h3>
+              <span class="project-date">2024-2025</span>
+            </div>
+            <p class="project-description">Una plataforma pensada para los amantes de las mascotas. Desde el apoyo a protectoras hasta un sistema de <em>Pet Travel</em> con integración de Google Maps.</p>
+            <div class="project-links">
+              <a href="https://github.com/NoeliaMB/demos/blob/main/demoPettys/DemoPettys.html" target="_blank" rel="noopener noreferrer" class="github"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://noeliadev.lovestoblog.com/demos/demoPettys/DemoPettys.html" target="_blank" rel="noopener noreferrer" class="demo"><i class="fas fa-globe"></i> Demo</a>
+            </div>
+          </article>
         </div>
       </div>
-      
-      <!-- Autodidacta -->
-      <div class="edu-item">
-        <div class="edu-icon">🧑‍💻</div>
-        <div class="edu-content">
-          <h3>Aprendizaje Autodidacta</h3>
-          <span>2024 – 2025</span>
-          <p>Desarrollo de proyectos propios en <strong>PHP</strong>, <strong>SQL</strong>, <strong>Git</strong> y <strong>JavaScript</strong>.</p>
-        </div>
-      </div>
+    </section>
+
+    <!-- EDUCACIÓN -->
+    <section id="education" class="reveal" data-bg="#1b1b1b" aria-labelledby="edu-title">
+      <div class="container">
+        <h2 id="edu-title" class="reveal-item">Formación y Estudios</h2>
+
+        <div class="education-timeline">
+          <div class="edu-item reveal-item">
+            <div class="edu-icon" aria-hidden="true">🎓</div>
+            <div class="edu-content">
+              <h3>Certificado Diseñador Web</h3>
+              <span>Comunidad de Madrid – 2025</span>
+              <p>Formación profesional en diseño web, experiencia de usuario y accesibilidad.</p>
+            </div>
+          </div>
+
+          <div class="edu-item reveal-item">
+            <div class="edu-icon" aria-hidden="true">🧑‍💻</div>
+            <div class="edu-content">
+              <h3>Aprendizaje Autodidacta</h3>
+              <span>2024 – 2025</span>
+              <p>Desarrollo de proyectos propios en <strong>PHP</strong>, <strong>SQL</strong>, <strong>Git</strong> y <strong>JavaScript</strong>.</p>
+            </div>
+          </div>
       
       <!-- React -->
-      <div class="edu-item">
+      <div class="edu-item reveal-item">
         <div class="edu-icon">⚛️</div>
         <div class="edu-content">
           <h3>Práctica en React</h3>
@@ -215,7 +168,7 @@
       </div>
       
       <!-- UX/UI -->
-      <div class="edu-item">
+      <div class="edu-item reveal-item">
         <div class="edu-icon">🎨</div>
         <div class="edu-content">
           <h3>Formación UX/UI</h3>
@@ -225,7 +178,7 @@
       </div>
 
       <!-- IA -->
-      <div class="edu-item">
+      <div class="edu-item reveal-item">
         <div class="edu-icon">🤖</div>
         <div class="edu-content">
           <h3>Trabajo con Inteligencia Artificial</h3>
@@ -235,7 +188,7 @@
       </div>
       
       <!-- Herramientas complementarias -->
-      <div class="edu-item">
+      <div class="edu-item reveal-item">
         <div class="edu-icon">🛠️</div>
         <div class="edu-content">
           <h3>Otras Tecnologías</h3>
@@ -248,92 +201,142 @@
   </div>
 </section>
 
+<!--BOTON VOLVER ARRIBA-->
+<button id="backToTop" aria-label="Volver arriba" class="back-to-top">
+  <span class="arrow">↑</span>
+</button>
+
 <!-- CONTACTO -->
-<section id="contact" data-bg="#0f0f0f">
+<section id="contact" class="reveal" data-bg="#0f0f0f">
   <div class="container">
-    <h2>Contacto / Colaboración</h2>
+    <h2 class="reveal-item">Contacto / Colaboración</h2>
 
     <!-- Pestañas -->
-    <div class="tabs">
-      <button class="tab-btn active" data-target="formParticular">Particular</button>
-      <button class="tab-btn" data-target="formEmpresa">Empresa</button>
-    </div>
+    <div class="tabs" role="tablist" aria-label="Selecciona tipo de contacto">
+          <button class="tab-btn-tipo active" data-target="formParticular" role="tab" aria-selected="true">Particular</button>
+          <button class="tab-btn-tipo" data-target="formEmpresa" role="tab" aria-selected="false">Empresa</button>
+        </div>
 
     <!-- Formularios -->
     <div class="forms-container">
 
       <!-- Formulario Particular -->
       <form id="formParticular" class="contact-form active" action="send_mail.php" method="POST">
-  <label>Nombre completo*<input type="text" name="namep" required></label>
-  <label>Email*<input type="email" name="email" required></label>
-  <label>Teléfono<input type="tel" name="phone"></label>
-  <label>Interés principal*  
-    <select name="interest" required>
+  <fieldset>
+    <legend>Datos personales</legend>
+
+    <label for="namep">Nombre completo*</label>
+    <input id="namep" type="text" name="namep" required>
+
+    <label for="emailp">Email*</label>
+    <input id="emailp" type="email" name="email" required>
+
+    <label for="phonep">Teléfono</label>
+    <input id="phonep" type="tel" name="phone">
+  </fieldset>
+
+  <fieldset>
+    <legend>Detalles del proyecto</legend>
+
+    <label for="interestp">Interés principal*</label>
+    <select id="interestp" name="interest" required>
       <option value="">Selecciona</option>
       <option value="portfolio">Portfolio Personal</option>
       <option value="tiendaOnline">Tienda Online</option>
       <option value="blog">Blog / Web Informativa</option>
       <option value="otro">Otro</option>
     </select>
-  </label>
-  <label>Tipo de proyecto*  
-    <select name="projectType" required>
+
+    <label for="projectTypep">Tipo de proyecto*</label>
+    <select id="projectTypep" name="projectType" required>
       <option value="">Selecciona</option>
       <option value="diseñoWeb">Diseño Web / UX/UI</option>
       <option value="consultoria">Consultoría</option>
       <option value="proyectoPersonal">Proyecto Personal</option>
       <option value="otro">Otro</option>
     </select>
-  </label>
-  <label>Detalles proyecto*<textarea name="message" required></textarea></label>
 
-  <!-- Checkbox de consentimiento GDPR -->
-  <label class="privacy-label">
-    <input type="checkbox" name="consent" required>
-    Acepto que mis datos sean tratados según la 
-    <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
-</label>
+    <label for="messagep">Detalles proyecto*</label>
+    <textarea id="messagep" name="message" required></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Consentimiento</legend>
+    <label class="privacy-label">
+      <input type="checkbox" name="consent" required>
+      Acepto que mis datos sean tratados según la 
+      <a href="privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>.
+    </label>
+  </fieldset>
 
   <button type="submit">Enviar</button>
   <button type="reset">Cancelar</button>
 </form>
 
+<!-- Mensajes accesibles -->
+<div id="form-messages-particular" class="form-messages" aria-live="polite" role="status"></div>
+
     <!-- Formulario Empresa -->
 <form id="formEmpresa" class="contact-form" action="send_mail.php" method="POST" style="display:none;">
-  <label>Nombre completo*<input type="text" name="name" required></label>
-  <label>Email*<input type="email" name="email" required></label>
-  <label>Teléfono<input type="tel" name="phone"></label>
-  <label>Nombre de la empresa*<input type="text" name="company" required></label>
-  <label>CIF / NIF<input type="text" name="cif"></label>
-  <label>Presupuesto aproximado  
-    <select name="budget">
+  <fieldset>
+    <legend>Datos de contacto</legend>
+
+    <label for="namee">Nombre completo*</label>
+    <input id="namee" type="text" name="name" required>
+
+    <label for="emaile">Email*</label>
+    <input id="emaile" type="email" name="email" required>
+
+    <label for="phonee">Teléfono</label>
+    <input id="phonee" type="tel" name="phone">
+
+    <label for="companye">Nombre de la empresa*</label>
+    <input id="companye" type="text" name="company" required>
+
+    <label for="cife">CIF / NIF</label>
+    <input id="cife" type="text" name="cif">
+  </fieldset>
+
+  <fieldset>
+    <legend>Detalles del proyecto</legend>
+
+    <label for="budgete">Presupuesto aproximado</label>
+    <select id="budgete" name="budget">
       <option value="">Selecciona</option>
       <option value="menos2000">Menos de 2.000€</option>
       <option value="2000-5000">2.000€ - 5.000€</option>
       <option value="mas5000">Más de 5.000€</option>
     </select>
-  </label>
-  <label>Tipo de proyecto*  
-    <select name="projectType" required>
+
+    <label for="projectTypee">Tipo de proyecto*</label>
+    <select id="projectTypee" name="projectType" required>
       <option value="">Selecciona</option>
       <option value="diseñoWeb">Diseño Web / UX/UI</option>
       <option value="consultoria">Consultoría</option>
       <option value="proyectoPersonal">Proyecto Personal</option>
       <option value="otro">Otro</option>
     </select>
-  </label>
-  <label>Detalles proyecto*<textarea name="message" required></textarea></label>
 
-  <!-- Checkbox de consentimiento GDPR -->
- <label class="privacy-label">
-    <input type="checkbox" name="consent" required>
-    Acepto que mis datos sean tratados según la 
-    <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
-</label>
+    <label for="messagee">Detalles proyecto*</label>
+    <textarea id="messagee" name="message" required></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Consentimiento</legend>
+    <label class="privacy-label">
+      <input type="checkbox" name="consent" required>
+      Acepto que mis datos sean tratados según la 
+      <a href="privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>.
+    </label>
+  </fieldset>
 
   <button type="submit">Enviar</button>
   <button type="reset">Cancelar</button>
 </form>
+
+<!-- Mensajes accesibles -->
+<div id="form-messages-empresa" class="form-messages" aria-live="polite" role="status"></div>
+
   </div>
 </section>
 
@@ -379,16 +382,37 @@
         </nav>
       </div>
 
-      <!-- Suscripción a newsletter -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">Suscríbete</h5>
-        <p>Recibe novedades sobre mis proyectos y tips de diseño web:</p>
-        <form action="#" class="d-flex flex-column flex-sm-row gap-2" aria-label="Formulario de suscripción">
-          <input type="email" class="form-control flex-grow-1" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
-          <button type="submit" class="btn btn-primary" aria-label="Suscribirse al newsletter">Suscribirse</button>
-        </form>
-      </div>
+      <!--Newsletter/Suscripcion-->
+<div class="col-md-4 mb-4">
+  <h5 class="fw-bold mb-3">Suscríbete</h5>
+  <p>Recibe novedades sobre mis proyectos y tips de diseño web:</p>
 
+  <form 
+    action="https://formspree.io/f/mblpnjvw"
+    method="POST"
+    aria-label="Formulario de suscripción"
+  >
+    <label for="email-suscripcion" class="visually-hidden">Correo electrónico</label>
+    <input 
+      id="email-suscripcion"
+      type="email"
+      name="email"
+      class="form-control"
+      placeholder="Tu correo electrónico"
+      required
+    >
+
+    <button 
+      type="submit"
+      class="btn btn-primary"
+    >
+      Suscribirse
+    </button>
+  </form>
+
+  <!-- Mensaje accesible -->
+  <div id="form-messages-suscripcion" class="form-messages mt-3" aria-live="polite" role="status"></div>
+</div>
     </div>
 
     <hr class="border-secondary my-4">
@@ -401,28 +425,21 @@
 
   </div>
 </footer>
+
+
 <!--Scripts-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ crossorigin="anonymous"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
- const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------------------------
-   Scroll suave botón HERO
---------------------------- */
-const btnScrollAbout = document.getElementById('btn-scroll-about');
-if (btnScrollAbout) {
-  btnScrollAbout.addEventListener('click', () => {
-    const target = document.getElementById('about');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-}
-
-  /* ---------------------------
-     Helpers
-  --------------------------- */
-  function throttle(fn, wait = 100) {
+  /* =========================
+     Preferencias & utilidades
+     ========================= */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isSmallScreen = () => window.innerWidth <= 575;
+  const throttle = (fn, wait = 80) => {
     let last = 0;
     return (...args) => {
       const now = Date.now();
@@ -431,217 +448,253 @@ if (btnScrollAbout) {
         fn(...args);
       }
     };
-  }
+  };
+  const safeQueryAll = (sel) => Array.from(document.querySelectorAll(sel || '') || []);
 
- 
+  /* =================================================
+     REVEAL: IntersectionObserver + fallback
+     ================================================= */
+  (function initReveal(){
+    const selectors = [
+      '.reveal-item','.feature-card','.project-card','.edu-item','.social-links',
+      '.footer','.hero h1','.hero h2','.hero p'
+    ];
+    const nodeSets = selectors.map(s => safeQueryAll(s));
+    const items = Array.from(new Set(nodeSets.flat()));
+
+    if (prefersReducedMotion || isSmallScreen() || !('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const index = items.indexOf(el);
+        const delay = index >= 0 ? Math.min(index * 60, 700) : 0;
+        el.style.setProperty('--delay', `${delay}ms`);
+        setTimeout(() => el.classList.add('is-visible'), 10);
+        obs.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+
+    items.forEach(el => {
+      try {
+        const opacity = window.getComputedStyle(el).getPropertyValue('opacity');
+        if (opacity && Number(opacity) === 1) {
+          el.classList.add('is-visible');
+          return;
+        }
+      } catch(e){}
+      io.observe(el);
+    });
+
+    let lastWidth = window.innerWidth;
+    window.addEventListener('resize', throttle(() => {
+      if (window.innerWidth <= 575 && lastWidth > 575)
+        items.forEach(el => el.classList.add('is-visible'));
+      lastWidth = window.innerWidth;
+    }, 150));
+
+    window.addEventListener('orientationchange', () => {
+      if (window.innerWidth <= 575)
+        items.forEach(el => el.classList.add('is-visible'));
+    });
+  })();
+
 
   /* ---------------------------
-     Tabs (formularios)
+     Scroll suave para anclas
   --------------------------- */
-  const tabs = document.querySelectorAll('.tab-btn');
-  const forms = document.querySelectorAll('.contact-form');
+  (function initSmoothScroll(){
+    const anchors = Array.from(document.querySelectorAll('a[href^="#"]'));
+    anchors.forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href === '#' || href === '#!') return;
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const sidebar = document.querySelector('.sidebar');
+        const menuToggle = document.querySelector('.menu-toggle');
+        if (sidebar && sidebar.classList.contains('open')) {
+          sidebar.classList.remove('open');
+          if (menuToggle) {
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    const btn = document.getElementById('btn-scroll-about');
+    if (btn) btn.addEventListener('click', e => {
+      const target = document.getElementById('about');
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  })();
 
-  // Inicializa Formulario según clase .active 
-  forms.forEach(f => {
-    f.style.display = f.classList.contains('active') ? 'block' : 'none';
+
+  /* ---------------------------
+     Scroll progress bar
+  --------------------------- */
+  window.addEventListener('scroll', () => {
+    const scrollProgress = document.querySelector('.scroll-progress');
+    if (!scrollProgress) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
   });
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
 
-      forms.forEach(form => {
-        if (form.id === tab.dataset.target) {
-          form.classList.add('active');
-          form.style.display = 'block';
-        } else {
-          form.classList.remove('active');
-          form.style.display = 'none';
+  /* ---------------------------
+     Tabs de formularios
+  --------------------------- */
+  (function initTabs(){
+    const tabs = safeQueryAll('.tab-btn-tipo');
+    const forms = safeQueryAll('.contact-form');
+    forms.forEach(f => f.style.display = f.classList.contains('active') ? 'block' : 'none');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        forms.forEach(f => {
+          f.style.display = f.id === tab.dataset.target ? 'block' : 'none';
+          f.classList.toggle('active', f.id === tab.dataset.target);
+        });
+      });
+      tab.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tab.click(); }
+      });
+    });
+  })();
+
+
+  /* ---------------------------
+     Formularios: envío + mensajes
+  --------------------------- */
+  (function initForms(){
+    const forms = [
+      { id: "formParticular", msgId: "form-messages-particular" },
+      { id: "formEmpresa", msgId: "form-messages-empresa" }
+    ];
+
+    forms.forEach(({ id, msgId }) => {
+      const form = document.getElementById(id);
+      const messageBox = document.getElementById(msgId);
+      if (!form || !messageBox) return;
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        messageBox.textContent = "Enviando...";
+        messageBox.className = "form-messages sending";
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+          });
+
+          if (response.ok) {
+            messageBox.textContent = "✅ ¡Mensaje enviado con éxito! Te responderé pronto.";
+            messageBox.className = "form-messages success";
+            form.reset();
+          } else {
+            messageBox.textContent = "❌ Hubo un error al enviar el mensaje. Intenta de nuevo.";
+            messageBox.className = "form-messages error";
+          }
+        } catch (error) {
+          messageBox.textContent = "⚠️ Error de conexión. Revisa tu red e inténtalo más tarde.";
+          messageBox.className = "form-messages error";
         }
       });
     });
-  });
+  })();
+
 
   /* ---------------------------
-     Background dinámico
+     Menú hamburguesa accesible
   --------------------------- */
-  const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
-  if (hasFinePointer && window.innerWidth >= 768) {
-    const onMove = throttle(e => {
-      const x = e.clientX / window.innerWidth * 100;
-      const y = e.clientY / window.innerHeight * 100;
+  (function initBurger(){
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    if (!menuToggle || !sidebar) return;
+    const links = Array.from(sidebar.querySelectorAll('a'));
+    const setAria = (open) => {
+      menuToggle.setAttribute('aria-expanded', String(open));
+      sidebar.setAttribute('aria-hidden', String(!open));
+    };
+    const openMenu = () => { sidebar.classList.add('open'); menuToggle.classList.add('active'); setAria(true); links[0]?.focus(); };
+    const closeMenu = () => { sidebar.classList.remove('open'); menuToggle.classList.remove('active'); setAria(false); menuToggle.focus(); };
+    const toggleMenu = () => sidebar.classList.contains('open') ? closeMenu() : openMenu();
+
+    menuToggle.addEventListener('pointerdown', (e) => { e.preventDefault(); toggleMenu(); });
+    menuToggle.addEventListener('keydown', e => { if (['Enter',' '].includes(e.key)) { e.preventDefault(); toggleMenu(); }});
+    links.forEach(link => {
+      link.addEventListener('click', closeMenu);
+      link.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && sidebar.classList.contains('open')) closeMenu(); });
+  })();
+
+
+  /* ---------------------------
+     Fondo dinámico
+  --------------------------- */
+  (function initDynamicBg(){
+    if (!(window.matchMedia && window.matchMedia('(pointer: fine)').matches) || window.innerWidth < 768) return;
+    const onMove = throttle((e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
       document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #111, #0f0f0f)`;
     }, 80);
     document.addEventListener('mousemove', onMove);
-  }
+  })();
+
 
   /* ---------------------------
-     Cambio de fondo por sección
+     Watermark scroll variable
   --------------------------- */
-  document.querySelectorAll('section[data-bg]').forEach(section => {
-    section.addEventListener('mouseenter', () => {
-      const bg = section.getAttribute('data-bg') || '#0f0f0f';
-      document.body.style.background = `radial-gradient(circle at 50% 50%, ${bg}, #0f0f0f)`;
-      section.classList.add('section-hover');
-    });
-    section.addEventListener('mouseleave', () => {
-      section.classList.remove('section-hover');
-    });
-  });
+  (function initWatermarkScroll(){
+    const setScrollVar = throttle(() => {
+      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    }, 60);
+    window.addEventListener('scroll', setScrollVar, { passive: true });
+    setScrollVar();
+  })();
 
 
-    /* ---------------------------
-   Scroll suave en footer
---------------------------- */
-document.querySelectorAll('.footer a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-/* ---------------------------
-   Animación de entrada del footer
---------------------------- */
-
-const footer = document.querySelector('.footer');
-
-if (footer && !prefersReducedMotion && 'IntersectionObserver' in window) {
-  const footerObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        footer.classList.add('is-visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  footerObserver.observe(footer);
-} else {
-  footer.classList.add('is-visible'); // fallback para movilidad o IE
-}
+  document.body.classList.add('scroll');
 
   /* ---------------------------
-     Menu hamburguesa / sidebar
+     Ajuste vh responsive
   --------------------------- */
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar = document.getElementById('sidebar');
-const srText = menuToggle.querySelector('.sr-only');
+  (function setVh(){
+    const apply = () => document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    apply();
+    window.addEventListener('resize', throttle(apply, 100));
+    window.addEventListener('orientationchange', apply);
+  })();
 
-if (menuToggle && sidebar) {
-  sidebar.setAttribute('aria-hidden', 'true');
-  menuToggle.setAttribute('aria-expanded', 'false');
-
-  const toggleMenu = () => {
-    const isOpen = sidebar.classList.toggle('open');
-    menuToggle.classList.toggle('active', isOpen);
-    sidebar.setAttribute('aria-hidden', (!isOpen).toString());
-    menuToggle.setAttribute('aria-expanded', isOpen.toString());
-    srText.textContent = isOpen ? 'Cerrar menú' : 'Abrir menú';
-  };
-
-    menuToggle.addEventListener('click', toggleMenu);
-    
-  // Abrir/cerrar con teclado (Enter o Space)
-  menuToggle.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      menuToggle.click();
-    }
-  });
-
-  // Cerrar menú al hacer click en un enlace
-  sidebar.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', e => {
-      // Scroll suave para anclas internas
-      const href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      }
-
-      // Cerrar menú
-      sidebar.classList.remove('open');
-      menuToggle.classList.remove('active');
-      sidebar.setAttribute('aria-hidden', 'true');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menú');
-    });
-  });
-
-  //Cerrar menu hamburguesa al hacer scroll
-  window.addEventListener('scroll', () => {
-  if (sidebar.classList.contains('open')) {
-    sidebar.classList.remove('open');
-    menuToggle.classList.remove('active');
-    sidebar.setAttribute('aria-hidden', 'true');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Abrir menú');
-  }
-});
-
-  // Cerrar menú si se hace clic fuera
-  document.addEventListener('click', e => {
-    if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('open')) {
-      sidebar.classList.remove('open');
-      menuToggle.classList.remove('active');
-      sidebar.setAttribute('aria-hidden', 'true');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menú');
-    }
-  });
-}
-  /* ---------------------------
-     IntersectionObserver unificado
-  --------------------------- */
-  const animTargets = document.querySelectorAll('.hero h1, .hero h2, .feature-card, .project-card, .edu-item, .social-links, .contact-form, p, h2, h3');
-
-  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-   animTargets.forEach(el => observer.observe(el));
-  } else {
-    // Fallback general para navegadores que no soportan IO o con movimiento reducido
-    animTargets.forEach(el => el.classList.add('is-visible'));
-  }
 
   /* ---------------------------
-     Marca de agua: activar clase scroll al load
+     Botón Volver Arriba
   --------------------------- */
- document.body.classList.add('scroll');
+  (function initBackToTop() {
+    const backToTop = document.getElementById('backToTop');
+    if (!backToTop) return;
+    const toggleBackToTop = () => backToTop.classList.toggle('show', window.scrollY > 400);
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
 
-  // Forzar visibilidad inmediata en móvil (si se detecta ancho pequeño)
-  // Aunque el bloque 'else' superior ya ayuda, esto refuerza el fix para móviles
-  if (window.innerWidth < 768) {
-    animTargets.forEach(el => el.classList.add('is-visible'));
-  }
-  
-  // Responsive movil: Ajuste de la altura visible (vh)
-  const setVh = () => {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  };
 
-  setVh();
-  window.addEventListener('resize', setVh);
 
 });
-
-
 </script>
 </body>
 </html>
 
-
-</html>
